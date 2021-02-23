@@ -85,3 +85,16 @@ body {
 .contact-link {
     text-decoration: none;
 }
+
+.hidden {
+    display: none;
+}
+
+#email-address {
+    font-family: monospace;
+}
+
+#email-contact:hover {
+    color: var(--hot-pink);
+    cursor: pointer;
+}
