@@ -1,17 +1,6 @@
-body {
-    /* variables */
-    --salmon: #F58382;
-    --pink: #FFB5B4;
-    --hot-pink: #FE504F;
-    --ice: #EBEAEB;
-    --elephant: #BBB8B3;
-    --armadillo: #72707B;
-    --navy-gray: #32374B;
-    --salmon-hot-pink-gradient: linear-gradient(45deg, var(--salmon) 75%, var(--hot-pink));
+@import './variables.css';
 
-    background: var(--ice);
-    color: var(--navy-gray);
-    font-family: Arial, Helvetica, sans-serif;
+body {
     padding: 2vh 2vw;
 }
 
@@ -24,6 +13,11 @@ body {
 }
 
 /* reusable block styles */
+.row {
+    align-self: center;
+    width: 85%; 
+}
+
 .left-content {
     float: left;
     width: 50%;
@@ -32,11 +26,6 @@ body {
 .right-content {
     float: right;
     width: 50%;
-}
-
-section {
-    align-self: center;
-    width: 85%; 
 }
 
 .header,
@@ -62,6 +51,10 @@ section {
     border: 1px solid var(--salmon);
     padding: 1rem;
     width: fit-content;
+}
+
+.contact-link {
+    text-decoration: none;
 }
 
 .profile-img-wrapper {

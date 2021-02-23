@@ -1,0 +1,33 @@
+:root {
+    /* color variables */
+    --salmon: #F58382;
+    --pink: #FFB5B4;
+    --hot-pink: #FE504F;
+    --ice: #EBEAEB;
+    --elephant: #BBB8B3;
+    --armadillo: #72707B;
+    --navy-gray: #32374B;
+    --salmon-hot-pink-gradient: linear-gradient(45deg, var(--salmon) 75%, var(--hot-pink));
+
+    /* shared styles for all pages */
+    background: var(--ice);
+    color: var(--navy-gray);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--navy-gray);
+}
+
+a:visited {
+    color: var(--armadillo);
+}
+
+a:hover {
+    color: var(--salmon);
+}
+
+a:active {
+    color: var(--pink);
+}
