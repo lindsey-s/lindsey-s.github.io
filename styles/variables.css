@@ -1,5 +1,5 @@
 :root {
-    /* color variables */
+    /* colors */
     --salmon: #F58382;
     --pink: #FFB5B4;
     --hot-pink: #FE504F;
@@ -13,6 +13,31 @@
     background: var(--ice);
     color: var(--navy-gray);
     font-family: Arial, Helvetica, sans-serif;
+
+    /* sizing vars for desktop */
+    --body-padding: 2vh 2vw;
+    --contact-text-size: medium;
+    --content-padding: 2em;
+    --content-width: 85%;
+    --l-col-width: 50%;
+    --r-col-width: 50%;
+    --row-width: 85%;
+}
+
+/* sizing vars for mobile */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    :root {
+        --body-padding: 2vh 1vw;
+        --contact-text-size: larger;
+        --content-padding: 2em 0;
+        --content-width: 75%;
+        --l-col-width: 100%;
+        --r-col-width: 100%;
+        --row-width: 100%;
+    }
 }
 
 a {
@@ -25,7 +50,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--salmon);
+    color: var(--hot-pink);
 }
 
 a:active {

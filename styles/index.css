@@ -1,7 +1,7 @@
 @import './variables.css';
 
 body {
-    padding: 2vh 2vw;
+    padding: var(--body-padding);
 }
 
 .main {
@@ -12,49 +12,51 @@ body {
     position: relative;
 }
 
-/* reusable block styles */
 .row {
     align-self: center;
-    width: 85%; 
+    width: var(--row-width); 
 }
 
 .left-content {
     float: left;
-    width: 50%;
+    width: var(--l-col-width);
 }
 
 .right-content {
     float: right;
-    width: 50%;
+    width: var(--r-col-width);
 }
 
-.header,
-.sub_header {
+.header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
 }
 
-/* contact section */
-.contact-wrapper,
+.sub-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.intro-wrapper,
 .profile-img-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: auto;
-    max-width: 75%;
-    padding: 2em;
+    padding: var(--content-padding);
+}
+
+.profile-img-wrapper {
+    max-width: var(--content-width);
 }
 
 .hello {
     background-clip: border-box;
-    background-color: var(--pink);
-    border-radius: 10px 10px 0px 10px; /* top left, top right, bottom right, bottom left */
-    border: 1px solid var(--salmon);
-    padding: 1rem;
+    background-color: var(--hot-pink);
+    border-radius: 1rem 1rem 1rem 0; /* top left, top right, bottom right, bottom left */
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
     width: fit-content;
-}
-
-.contact-link {
-    text-decoration: none;
 }
 
 .profile-img-wrapper {
@@ -67,4 +69,19 @@ body {
     box-shadow: 0 0 0 1rem var(--pink);
     max-width: 100%;
     position: relative;
+}
+
+.contact-item {
+    display: block;
+    font-size: var(--contact-text-size);
+    padding: 0.5vh 0;
+}
+
+.contact-item span.fa {
+    /* font-awesome icons */
+    padding-right: 0.5rem;
+}
+
+.contact-link {
+    text-decoration: none;
 }
