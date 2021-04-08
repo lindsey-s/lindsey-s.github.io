@@ -15,10 +15,11 @@
     font-family: Arial, Helvetica, sans-serif;
 
     /* sizing vars for desktop */
-    --body-padding: 2vh 2vw;
+    --body-padding: 2vh 0;
     --contact-text-size: medium;
-    --content-padding: 2em;
     --content-width: 85%;
+    --header-size: 2.5em;
+    --img-width: 15rem;
     --l-col-width: 50%;
     --r-col-width: 50%;
     --row-width: 85%;
@@ -26,33 +27,17 @@
 
 /* sizing vars for mobile */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 300px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     :root {
         --body-padding: 2vh 1vw;
-        --contact-text-size: larger;
-        --content-padding: 2em 0;
+        --contact-text-size: 2em;
         --content-width: 75%;
+        --header-size: 3.5rem;
+        --img-width: 100%;
         --l-col-width: 100%;
         --r-col-width: 100%;
         --row-width: 100%;
     }
-}
-
-a {
-    text-decoration: none;
-    color: var(--navy-gray);
-}
-
-a:visited {
-    color: var(--armadillo);
-}
-
-a:hover {
-    color: var(--hot-pink);
-}
-
-a:active {
-    color: var(--pink);
 }
