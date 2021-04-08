@@ -1,0 +1,119 @@
+@import './variables.css';
+@import './globals.css';
+
+body {
+    padding: var(--body-padding);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh 2vw;
+    position: relative;
+}
+
+.row {
+    align-self: center;
+    width: var(--row-width); 
+}
+
+.left-content {
+    float: left;
+    width: var(--l-col-width);
+}
+
+.right-content {
+    float: right;
+    width: var(--r-col-width);
+}
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .left-content, .right-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro-wrapper, .profile-img-wrapper {
+        align-self: center;
+    }
+}
+
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--header-size);
+    margin-bottom: 0.5rem;
+}
+
+.sub-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.intro-wrapper,
+.profile-img-wrapper {
+    padding: 1em;
+}
+
+.hello {
+    background-clip: border-box;
+    background-color: var(--hot-pink);
+    border-radius: 1rem 1rem 1rem 0; /* top left, top right, bottom right, bottom left */
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    width: fit-content;
+}
+
+.intro-wrapper {
+    font-size: var(--contact-text-size);
+}
+
+.profile-img-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: var(--content-width);
+}
+
+.profile-img {
+    border: 0.75rem solid var(--salmon);
+    border-radius: 100%;
+    box-shadow: 0 0 0 0.75rem var(--pink);
+    max-width: var(--img-width);
+    position: relative;
+}
+
+.contact-item {
+    display: block;
+    font-size: var(--contact-text-size);
+    padding: 0.5vh 0;
+}
+
+.contact-item span.fa {
+    /* font-awesome icons */
+    padding-right: 0.5rem;
+}
+
+.contact-link {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#email-address {
+    font-family: monospace;
+}
+
+#email-contact:hover {
+    color: var(--hot-pink);
+    cursor: pointer;
+}
