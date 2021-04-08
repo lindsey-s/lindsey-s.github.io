@@ -127,6 +127,10 @@ body {
     font-size: var(--about-me-text-size);
 }
 
+.pink-text {
+    color: var(--hot-pink);
+}
+
 .love-code {
     align-items: center;
     display: flex;
@@ -142,12 +146,19 @@ body {
     flex-flow: row wrap;
 }
 
-.skills span {
+.skills ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
     border: 2px solid var(--salmon);
     border-radius: 8px;
     color: var(--armadillo);
-    padding: 3px;
     margin: 0 4px 6px 0;
+    padding: 3px;
 }
 
 @media only screen 
