@@ -9,6 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    max-width: calc(100% - 20vh);
     padding: 2vh 2vw;
     position: relative;
 }
@@ -65,7 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: var(--content-width);
+    max-width: var(--img-wrapper-width);
 }
 
 .profile-img {
@@ -118,7 +120,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     font-size: 2em;
-    justify-content: center;
     height: 100%;
 }
 
@@ -146,6 +147,12 @@ body {
   and (min-width: 300px)
   and (max-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    .main {
+        margin: none;
+        max-width: 100%;
+    }
+
     .left-content, .right-content {
         display: flex;
         flex-direction: column;

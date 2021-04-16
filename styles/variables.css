@@ -18,9 +18,9 @@
     --about-me-text-stize: small;
     --body-padding: 2vh 0;
     --contact-text-size: medium;
-    --content-width: 85%;
     --header-size: 2.5em;
     --img-width: 15rem;
+    --img-wrapper-width: 85%;
     --l-col-width: 50%;
     --r-col-width: 50%;
     --row-flex-direction: row;
@@ -33,12 +33,12 @@
   and (max-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) { 
     :root {
-        --about-me-text-size: 3em;
+        --about-me-text-size: small;
         --body-padding: 2vh 1vw;
-        --contact-text-size: 2em;
-        --content-width: 75%;
+        --contact-text-size: medium;
         --header-size: 3.5rem;
         --img-width: 100%;
+        --img-wrapper-width: 75%;
         --l-col-width: 100%;
         --r-col-width: 100%;
         --row-flex-direction: column;
