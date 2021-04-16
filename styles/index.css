@@ -92,7 +92,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
 }
 
 #email-address {
