@@ -1,121 +1,166 @@
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  padding: 5rem 0;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+.row {
+  align-self: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: var(--row-flex-direction);
+  /* padding: 6vw 0; */
+  width: var(--row-width);
 }
 
-.footer a {
+.left {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: var(--l-col-width);
+}
+
+.right {
   align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--r-col-width);
 }
 
 .title {
-  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--header-size);
   line-height: 1.15;
-  font-size: 4rem;
+  margin-bottom: 0.5rem;
 }
 
-.title,
-.description {
-  text-align: center;
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  margin-top: 0;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.hello {
+  background-clip: border-box;
+  background-color: var(--hot-pink);
+  border-radius: 1rem 1rem 1rem 0; /* top left, top right, bottom right, bottom left */
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  width: fit-content;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.contactContainer {
   display: flex;
+  flex-direction: column;
+}
+
+.contactItem {
+  display: block;
+  font-size: var(--contact-text-size);
+  padding: 0.5vh 0;
+}
+
+.contactIcon {
+  max-width: 2rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.profileImgWrapper {
+  max-width: var(--img-wrapper-width);
+}
+
+.profileImg {
+  border: 0.75rem solid var(--salmon);
+  border-radius: 100%;
+  box-shadow: 0 0 0 0.75rem var(--pink);
+  max-width: var(--img-width);
+  position: relative;
+}
+
+#emailAddress {
+  font-family: monospace;
+}
+
+.emailContact:hover {
+  color: var(--hot-pink);
+  cursor: pointer;
+}
+
+.loveCode {
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  height: 100%;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.loveIcon {
+  max-width: 20%;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.about {
+  font-size: var(--about-me-text-size);
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.pinkText {
+  color: var(--hot-pink);
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.skills {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.skills ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.skills li {
+  border: 2px solid var(--salmon);
+  border-radius: 8px;
+  color: var(--armadillo);
+  margin: 0 4px 6px 0;
+  padding: 3px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen 
+  and (min-width: 300px)
+  and (max-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .main {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .left, .right {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .contentWrapper, .profileImgWrapper {
+    align-self: center;
+  }
+
+  .loveCode {
+    display: none;   
   }
 }
