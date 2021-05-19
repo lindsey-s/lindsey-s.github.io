@@ -1,16 +1,30 @@
+@import './variables.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 a {
-    text-decoration: none;
-    color: var(--navy-gray);
+  color: var(--navy-gray);
+  text-decoration: none;
 }
 
 a:visited {
-    color: var(--armadillo);
+  color: var(--armadillo);
 }
 
 a:hover {
-    color: var(--hot-pink);
+  color: var(--hot-pink);
 }
 
 a:active {
-    color: var(--pink);
+  color: var(--pink);
+}
+
+* {
+  box-sizing: border-box;
 }

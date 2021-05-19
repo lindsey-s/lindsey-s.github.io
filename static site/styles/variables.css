@@ -14,15 +14,17 @@
     color: var(--navy-gray);
     font-family: Arial, Helvetica, sans-serif;
 
-     /* sizing vars for desktop */
-     --about-me-text-stize: small;
-     --header-size: 2.5em;
-     --img-width: 15rem;
-     --img-wrapper-width: 85%;
-     --l-col-width: 50%;
-     --r-col-width: 50%;
-     --row-flex-direction: row;
-     --row-width: 85%;
+    /* sizing vars for desktop */
+    --about-me-text-stize: small;
+    --body-padding: 2vh 0;
+    --contact-text-size: medium;
+    --header-size: 2.5em;
+    --img-width: 15rem;
+    --img-wrapper-width: 85%;
+    --l-col-width: 50%;
+    --r-col-width: 50%;
+    --row-flex-direction: row;
+    --row-width: 85%;
 }
 
 /* sizing vars for mobile */
@@ -32,6 +34,8 @@
   and (-webkit-min-device-pixel-ratio: 2) { 
     :root {
         --about-me-text-size: small;
+        --body-padding: 2vh 1vw;
+        --contact-text-size: medium;
         --header-size: 3.5rem;
         --img-width: 100%;
         --img-wrapper-width: 75%;
