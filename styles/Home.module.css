@@ -86,13 +86,24 @@
   position: relative;
 }
 
-#emailAddress {
+.emailAddress {
+  display: inline;
   font-family: monospace;
 }
 
-.emailContact:hover {
+.emailContact:hover, 
+.copyEmailIcon:hover {
   color: var(--hot-pink);
   cursor: pointer;
+}
+
+.copyEmailIcon {
+  align-items: center;
+  display: inline-flex;
+  height: 2rem;
+  padding-left: 0.5rem;
+  width: 2rem;
+  vertical-align: middle;
 }
 
 .loveCode {
