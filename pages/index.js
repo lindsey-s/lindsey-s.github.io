@@ -1,14 +1,17 @@
 import Head from 'next/head'
+
 import styles from '/styles/Home.module.css'
+import useCopyToClipboard from '../utils/useCopyToClipboard'
 
 import { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrella, faEnvelope, faLaptopCode, faGrinHearts } from '@fortawesome/free-solid-svg-icons'
+import { faUmbrella, faEnvelope, faLaptopCode, faGrinHearts, faClipboardList, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   const [emailHidden, setEmailHidden] = useState(true)
+  const [emailCopied, handleCopy] = useCopyToClipboard(5000)
 
   return (
     <div className={styles.container}>
@@ -52,12 +55,22 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className={[styles.contactItem, styles.emailContact].join(' ')} onClick={() => { setEmailHidden(!emailHidden) }}>
-                <FontAwesomeIcon className={styles.contactIcon} icon={faEnvelope} />
-                <span>
-                  email me
-                </span>
-                <p id={styles.emailAddress} className={emailHidden ? styles.hidden : ''}>ly DOT stevenson AT gmail DOT com</p>
+              <div className={styles.contactItem}>
+                <div className={styles.emailContact} onClick={() => { setEmailHidden(!emailHidden) }}>
+                  <FontAwesomeIcon className={styles.contactIcon} icon={faEnvelope} />
+                  <span>
+                    email me
+                  </span>
+                </div>
+                <div className={emailHidden ? styles.hidden : ''}>
+                  <p className={styles.emailAddress}>ly DOT stevenson AT gmail DOT com</p>
+                  <div className={styles.copyEmailIcon} onClick={() => handleCopy('ly.stevenson@gmail.com')}>
+                    {emailCopied ? 
+                      <FontAwesomeIcon icon={faCheck} className={styles.contactIcon} /> : 
+                      <FontAwesomeIcon icon={faClipboardList} className={styles.contactIcon} />
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>
