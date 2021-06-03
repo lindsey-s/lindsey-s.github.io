@@ -1,7 +1,6 @@
-import Head from 'next/head'
-
 import styles from '/styles/Home.module.css'
 import useCopyToClipboard from '../utils/useCopyToClipboard'
+import Nav from '../components/nav/nav'
 
 import { useState } from 'react'
 
@@ -15,10 +14,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Lindsey Stevenson</title>
-        <link rel="icon" type="image/ico" href="/favicon.ico" />
-      </Head>
+      <Nav />
 
       <main className={styles.main}>
         
