@@ -1,6 +1,6 @@
 import styles from '/styles/Home.module.css'
+import PageWrap from '../components/pageWrap'
 import useCopyToClipboard from '../utils/useCopyToClipboard'
-import Nav from '../components/nav/nav'
 
 import { useState } from 'react'
 
@@ -13,10 +13,8 @@ export default function Home() {
   const [emailCopied, handleCopy] = useCopyToClipboard(5000)
 
   return (
-    <div className={styles.container}>
-      <Nav />
-
-      <main className={styles.main}>
+    <PageWrap>
+      <div className={styles.container}>
         
         <section className={styles.row}>
           <div className={styles.left}>
@@ -117,7 +115,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </PageWrap>
   )
 }
