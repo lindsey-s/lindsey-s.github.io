@@ -10,7 +10,6 @@
   align-self: center;
   display: flex;
   flex-direction: var(--row-flex-direction);
-  /* padding: 6vw 0; */
   width: var(--row-width);
 }
 
@@ -51,23 +50,6 @@
   width: fit-content;
 }
 
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.contactItem {
-  display: block;
-  font-size: var(--contact-text-size);
-  padding: 0.5vh 0;
-}
-
-.contactIcon {
-  max-width: 2rem;
-  padding-right: 0.5rem;
-  vertical-align: middle;
-}
-
 .profileImgWrapper {
   max-width: var(--img-wrapper-width);
 }
@@ -78,26 +60,6 @@
   box-shadow: 0 0 0 0.75rem var(--pink);
   max-width: var(--img-width);
   position: relative;
-}
-
-.emailAddress {
-  display: inline;
-  font-family: monospace;
-}
-
-.emailContact:hover, 
-.copyEmailIcon:hover {
-  color: var(--hot-pink);
-  cursor: pointer;
-}
-
-.copyEmailIcon {
-  align-items: center;
-  display: inline-flex;
-  height: 2rem;
-  padding-left: 0.5rem;
-  width: 2rem;
-  vertical-align: middle;
 }
 
 .loveCode {
@@ -139,10 +101,6 @@
   color: var(--armadillo);
   margin: 0 4px 6px 0;
   padding: 3px;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 @media only screen 

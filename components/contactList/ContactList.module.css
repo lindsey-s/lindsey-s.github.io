@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactItem {
+  display: block;
+  font-size: var(--contact-text-size);
+  padding: 0.5vh 0;
+}
+
+.contactIcon {
+  max-width: 2rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.emailAddress {
+  display: inline;
+  font-family: monospace;
+}
+
+.emailContact:hover, 
+.copyEmailIcon:hover {
+  color: var(--hot-pink);
+  cursor: pointer;
+}
+
+.copyEmailIcon {
+  align-items: center;
+  display: inline-flex;
+  height: 2rem;
+  padding-left: 0.5rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.hidden {
+  visibility: hidden;
+}

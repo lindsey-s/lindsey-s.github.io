@@ -6,7 +6,7 @@ export default function PageWrap({children}) {
     return (
         <div className={styles.container}>
             <Nav />
-            <main className={styles.main}>
+            <main>
                 {children}
             </main>
         </div>

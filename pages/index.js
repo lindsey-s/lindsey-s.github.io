@@ -1,17 +1,12 @@
 import styles from '/styles/Home.module.css'
 import PageWrap from '../components/pageWrap'
-import useCopyToClipboard from '../utils/useCopyToClipboard'
-
-import { useState } from 'react'
+import ContactList from '../components/contactList'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrella, faEnvelope, faLaptopCode, faGrinHearts, faClipboardList, faCheck } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLaptopCode, faGrinHearts } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
-  const [emailHidden, setEmailHidden] = useState(true)
-  const [emailCopied, handleCopy] = useCopyToClipboard(5000)
-
+  
   return (
     <PageWrap>
       <div className={styles.container}>
@@ -22,51 +17,7 @@ export default function Home() {
             <h1 className={styles.title}>Lindsey Stevenson</h1>
             <h2 className={styles.subtitle}>Software Developer</h2>
         
-            <div className={styles.contactContainer}>
-
-              <div className={styles.contactItem}>
-                <FontAwesomeIcon className={styles.contactIcon} icon={faUmbrella} />
-                <span>
-                  Portland, Oregon
-                </span>
-              </div>
-
-              <div className={styles.contactItem}>
-                <a href='https://www.linkedin.com/in/stevensonlindsey/'>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faLinkedin} />
-                  <span>
-                    LinkedIn
-                  </span>
-                </a>
-              </div>
-
-              <div className={styles.contactItem}>
-                <a href='https://www.github.com/lindsey-s'>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faGithub} />
-                  <span>
-                    Github
-                  </span>
-                </a>
-              </div>
-
-              <div className={styles.contactItem}>
-                <div className={styles.emailContact} onClick={() => { setEmailHidden(!emailHidden) }}>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faEnvelope} />
-                  <span>
-                    email me
-                  </span>
-                </div>
-                <div className={emailHidden ? styles.hidden : ''}>
-                  <p className={styles.emailAddress}>ly DOT stevenson AT gmail DOT com</p>
-                  <div className={styles.copyEmailIcon} onClick={() => handleCopy('ly.stevenson@gmail.com')}>
-                    {emailCopied ? 
-                      <FontAwesomeIcon icon={faCheck} className={styles.contactIcon} /> : 
-                      <FontAwesomeIcon icon={faClipboardList} className={styles.contactIcon} />
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ContactList />
           </div>
 
           <div className={styles.right}>
