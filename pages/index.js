@@ -4,6 +4,7 @@ import ContactList from '../components/contactList'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptopCode, faGrinHearts } from '@fortawesome/free-solid-svg-icons'
+import PageTitle from '../components/pageTitle'
 
 export default function Home() {
   
@@ -13,10 +14,7 @@ export default function Home() {
         
         <section className={styles.row}>
           <div className={styles.left}>
-            <span className={styles.hello}>Hi there! I'm</span>
-            <h1 className={styles.title}>Lindsey Stevenson</h1>
-            <h2 className={styles.subtitle}>Software Developer</h2>
-        
+            <PageTitle />
             <ContactList />
           </div>
 
