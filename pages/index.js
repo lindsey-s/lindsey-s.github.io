@@ -12,10 +12,9 @@ export default function Home() {
     <PageWrap>
       <div className={styles.container}>
         
-        <section className={styles.row}>
+        <section id='home' className={styles.row}>
           <div className={styles.left}>
             <PageTitle />
-            <ContactList />
           </div>
 
           <div className={styles.right}>
@@ -25,7 +24,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.row}>
+        <section id='about' className={styles.row}>
           <div className={styles.left}>
             <div className={styles.loveCode}>
               <FontAwesomeIcon className={styles.loveIcon} icon={faGrinHearts} />
@@ -62,6 +61,16 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id={'contact'} className={styles.row}>
+          <div className={styles.left}>
+            <h1 className={styles.subtitle}>Get in touch</h1>
+            <p>I'm actively looking for new opportunities. I would love to hear from you -
+                especially if you think we might be a good fit.
+                The best way is to email me directly. I look forward to chatting with ya.</p>
+            <ContactList />
           </div>
         </section>
       </div>
