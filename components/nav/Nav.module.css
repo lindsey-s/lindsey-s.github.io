@@ -1,0 +1,88 @@
+.nav {
+    position: fixed;
+    padding-top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+
+.menu {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.menuItems {
+    /* remove default ul styles */
+    list-style: none;
+    margin: unset;
+    padding: unset;
+    padding-top: 1rem;
+}
+
+.menuItem {
+    color: white;
+    font-size: small;
+}
+
+.menuItem:hover {
+    text-decoration: underline;
+}
+
+.menuItem--active {
+    text-decoration: underline;
+}
+
+.menuOpen {
+    animation: stretchDown 1000ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes stretchDown {
+    0% { 
+        transform: scaleY(.5);
+        transform: scaleX(1);
+    }
+    30% {
+        transform: scaleY(.5);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.menuOpen .menuItems {
+    animation: growDown 1000ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.menuClosed .menuItems {
+    display: none; /* visibility instead? */
+}
+
+.menuButton {
+    background-color: var(--hot-pink);
+    border-radius: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+

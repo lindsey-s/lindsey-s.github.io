@@ -1,78 +1,20 @@
-import Head from 'next/head'
-
 import styles from '/styles/Home.module.css'
-import useCopyToClipboard from '../utils/useCopyToClipboard'
-
-import { useState } from 'react'
+import PageWrap from '../components/pageWrap'
+import ContactList from '../components/contactList'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrella, faEnvelope, faLaptopCode, faGrinHearts, faClipboardList, faCheck } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLaptopCode, faGrinHearts } from '@fortawesome/free-solid-svg-icons'
+import PageTitle from '../components/pageTitle'
 
 export default function Home() {
-  const [emailHidden, setEmailHidden] = useState(true)
-  const [emailCopied, handleCopy] = useCopyToClipboard(5000)
-
+  
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Lindsey Stevenson</title>
-        <link rel="icon" type="image/ico" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
+    <PageWrap>
+      <div className={styles.container}>
         
-        <section className={styles.row}>
+        <section id='home' className={styles.row}>
           <div className={styles.left}>
-            <span className={styles.hello}>Hi there! I'm</span>
-            <h1 className={styles.title}>Lindsey Stevenson</h1>
-            <h2 className={styles.subtitle}>Software Developer</h2>
-        
-            <div className={styles.contactContainer}>
-
-              <div className={styles.contactItem}>
-                <FontAwesomeIcon className={styles.contactIcon} icon={faUmbrella} />
-                <span>
-                  Portland, Oregon
-                </span>
-              </div>
-
-              <div className={styles.contactItem}>
-                <a href='https://www.linkedin.com/in/stevensonlindsey/'>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faLinkedin} />
-                  <span>
-                    LinkedIn
-                  </span>
-                </a>
-              </div>
-
-              <div className={styles.contactItem}>
-                <a href='https://www.github.com/lindsey-s'>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faGithub} />
-                  <span>
-                    Github
-                  </span>
-                </a>
-              </div>
-
-              <div className={styles.contactItem}>
-                <div className={styles.emailContact} onClick={() => { setEmailHidden(!emailHidden) }}>
-                  <FontAwesomeIcon className={styles.contactIcon} icon={faEnvelope} />
-                  <span>
-                    email me
-                  </span>
-                </div>
-                <div className={emailHidden ? styles.hidden : ''}>
-                  <p className={styles.emailAddress}>ly DOT stevenson AT gmail DOT com</p>
-                  <div className={styles.copyEmailIcon} onClick={() => handleCopy('ly.stevenson@gmail.com')}>
-                    {emailCopied ? 
-                      <FontAwesomeIcon icon={faCheck} className={styles.contactIcon} /> : 
-                      <FontAwesomeIcon icon={faClipboardList} className={styles.contactIcon} />
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
+            <PageTitle />
           </div>
 
           <div className={styles.right}>
@@ -82,7 +24,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.row}>
+        <section id='about' className={styles.row}>
           <div className={styles.left}>
             <div className={styles.loveCode}>
               <FontAwesomeIcon className={styles.loveIcon} icon={faGrinHearts} />
@@ -121,7 +63,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
+
+        <section id={'contact'} className={styles.row}>
+          <div className={styles.left}>
+            <h1 className={styles.subtitle}>Get in touch</h1>
+            <p>I'm actively looking for new opportunities. I would love to hear from you!
+                The best way is to email me directly. I look forward to chatting with ya.</p>
+            <ContactList />
+          </div>
+        </section>
+
+        <section className={styles.row}>
+          {/* empty section to allow menu links to pull bottom content to top of viewport */}
+        </section>
+      </div>
+    </PageWrap>
   )
 }

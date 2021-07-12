@@ -1,0 +1,22 @@
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--header-size);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.hello {
+  background-clip: border-box;
+  background-color: var(--hot-pink);
+  border-radius: 1rem 1rem 1rem 0; /* top left, top right, bottom right, bottom left */
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
