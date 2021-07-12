@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+}
+
+a.button {
+    background-color: var(--hot-pink);
+    border: 2px solid var(--hot-pink);
+    border-radius: 1rem;
+    color: var(--ice);
+    font-weight: bold;
+    padding: .5rem 1rem;
+}
+
+.button:hover {
+    background-color: var(--pink);
+    border: 2px solid var(--salmon);
+    color: var(--navy-gray);
+}
+
+.icon {
+    height: 1rem;
+    padding-left: .5rem;
+}
