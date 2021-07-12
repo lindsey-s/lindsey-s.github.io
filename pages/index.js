@@ -1,5 +1,6 @@
 import styles from '/styles/Home.module.css'
 import PageWrap from '../components/pageWrap'
+import LinkToResume from '../components/linkToResume'
 import ContactList from '../components/contactList'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -60,6 +61,8 @@ export default function Home() {
                   <li>CSS</li>
                 </ul>
               </div>
+
+              <LinkToResume />
             </div>
           </div>
         </section>
