@@ -2,6 +2,7 @@
     position: fixed;
     padding-top: 1rem;
     right: 1rem;
+    z-index: 1;
 }
 
 .menu {
@@ -19,7 +20,6 @@
     list-style: none;
     margin: unset;
     padding: unset;
-    
     padding-top: 1rem;
 }
 

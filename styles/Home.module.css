@@ -11,19 +11,21 @@
   display: flex;
   flex-direction: var(--row-flex-direction);
   width: var(--row-width);
+  height: 50vh;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .left {
-  display: flex;
-  flex-direction: column;
   width: var(--l-col-width);
 }
 
 .right {
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: var(--r-col-width);
 }
 
@@ -49,7 +51,7 @@
 }
 
 .loveIcon {
-  max-width: 20%;
+  max-width: 40%;
 }
 
 .about {
@@ -94,6 +96,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .row {
+    height: auto;
   }
 
   .contentWrapper, .profileImgWrapper {

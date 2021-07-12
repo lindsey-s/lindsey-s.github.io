@@ -5,7 +5,7 @@ function pagesResponse(contents) {
     let pages = []
     contents.forEach(function(item) { 
         if (!item.includes('.js') || item.includes('_')) {
-            return // don't pages for directories nor required _app.js file
+            return // exclude directories and required _app.js file
         }
         pages.push(formatPage(item))
     })

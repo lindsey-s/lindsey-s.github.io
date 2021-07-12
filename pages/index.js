@@ -67,11 +67,14 @@ export default function Home() {
         <section id={'contact'} className={styles.row}>
           <div className={styles.left}>
             <h1 className={styles.subtitle}>Get in touch</h1>
-            <p>I'm actively looking for new opportunities. I would love to hear from you -
-                especially if you think we might be a good fit.
+            <p>I'm actively looking for new opportunities. I would love to hear from you!
                 The best way is to email me directly. I look forward to chatting with ya.</p>
             <ContactList />
           </div>
+        </section>
+
+        <section className={styles.row}>
+          {/* empty section to allow menu links to pull bottom content to top of viewport */}
         </section>
       </div>
     </PageWrap>
