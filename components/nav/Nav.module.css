@@ -80,9 +80,19 @@
 
 .menuButton {
     background-color: var(--hot-pink);
+    border: 2px solid var(--hot-pink);    
     border-radius: 1rem;
     font-weight: bold;
     padding: 1rem;
     text-transform: uppercase;
 }
 
+.menuButton:hover {
+    background-color: var(--pink);
+    border: 2px solid var(--salmon);
+    color: var(--navy-gray);
+}
+
+.menuOpen .menuButton:hover .menuItem {
+    color: var(--navy-gray);
+}
